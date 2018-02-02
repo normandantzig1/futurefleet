@@ -1,0 +1,23 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'futureFleet/style.css' %}" />
+
+
+
+{% if latest_comic %}
+    <h1>
+    <a href="/futureFleet/{{ comic.id }}/">{{ latest_comic.comic_title_text }}</a>
+
+    </h1>
+
+    <img src="{% static latest_comic.comic_location %} " alt="My image"/>
+
+
+
+{% else %}
+
+    <p>No comics are available.
+    </p>
+{% endif %}
+
+

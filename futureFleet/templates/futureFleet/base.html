@@ -1,0 +1,47 @@
+{% load bootstrap3 %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning Log</title>
+    {% bootstrap_css %} {% bootstrap_javascript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'futureFleet/style.css' %}" />
+    
+    <style>
+        .navbar-header {text-align: center;
+        font-size: 50px;}
+        .jumbotron {text-align: center;}
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header ">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> </button>
+                <a class="navbar-brand" href="{% url 'index' %}"> Future Fleet</a>
+            </div>
+          
+        </div> <!--/.nav-container -->
+    </nav> <!--/.nav- -->
+
+
+
+    <p>
+        <a href="{url futureFleet:index}">Future Fleet</a>
+    </p>
+
+
+
+
+
+
+
+
+
+
+    {%block content %}{% endblock content %} {%block footer %}{% endblock footer %}
